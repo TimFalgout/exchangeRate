@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Currency Exchange</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+  <div class="container-fluid">
+    <div class="container text-center header-container">
+      <h1>💵 Currency Exchange 💷</h1>
+    </div>
+  </div>
+
+    <!-- First Dropdown (Base Currency) -->
+    <div class="container dropdown-container">
+    <div class="dropdown-center exch-buttons mb-3 mx-5">
+      <button class="btn btn-success dropdown-toggle" type="button" id="baseCurrencyButton" data-bs-toggle="dropdown" aria-expanded="false">
+        Choose Base Currency
+      </button>
+      <ul class="dropdown-menu" aria-labelledby="baseCurrencyButton">
+        <li><button class="dropdown-item base-currency" data-value="USD">USD - United States Dollar</button></li>
+        <li><button class="dropdown-item base-currency" data-value="GBP">GBP - Pound Sterling</button></li>
+        <li><button class="dropdown-item base-currency" data-value="EUR">EUR - Euro</button></li>
+        <li><button class="dropdown-item target-currency" data-value="JPY">JPY - Japanese Yen</button></li>
+        <li><button class="dropdown-item target-currency" data-value="CNY">CNY - Chinese Yuan</button></li>
+        <li><button class="dropdown-item target-currency" data-value="RUB">RUB - Russian Ruble</button></li>
+        <li><button class="dropdown-item target-currency" data-value="INR">INR - Indian Rupee</button></li>
+        <li><button class="dropdown-item target-currency" data-value="AUD">AUD - Australian Dollar</button></li>
+        <li><button class="dropdown-item target-currency" data-value="CAD">CAD - Canadian Dollar</button></li>
+        <li><button class="dropdown-item target-currency" data-value="CHF">CHF - Swiss Franc</button></li>
+        <li><button class="dropdown-item target-currency" data-value="CUP">CUP - Colombian Peso</button></li>
+        <li><button class="dropdown-item target-currency" data-value="CZK">CZK - Czech Koruna</button></li>
+        <li><button class="dropdown-item target-currency" data-value="DKK">DKK - Danish Krone</button></li>
+        <li><button class="dropdown-item target-currency" data-value="HKD">HKD - Hong Kong Dollar</button></li>
+        <li><button class="dropdown-item target-currency" data-value="HUF">HUF - Hungarian Forint</button></li>
+        <li><button class="dropdown-item target-currency" data-value="IDR">IDR - Indonesian Rupiah</button></li>
+        <li><button class="dropdown-item target-currency" data-value="ILS">ILS - Israeli Shekel</button></li>
+        <li><button class="dropdown-item target-currency" data-value="MYR">MYR - Malaysian Ringgit</button></li>
+        <li><button class="dropdown-item target-currency" data-value="MXN">MXN - Mexican Peso</button></li>
+        <li><button class="dropdown-item target-currency" data-value="NOK">NOK - Norwegian Krone</button></li>
+        <li><button class="dropdown-item target-currency" data-value="NZD">NZD - New Zealand Dollar</button></li>
+        <li><button class="dropdown-item target-currency" data-value="PHP">PHP - Philippine Peso</button></li>
+        <li><button class="dropdown-item target-currency" data-value="PLN">PLN - Polish Zloty</button></li>
+        <li><button class="dropdown-item target-currency" data-value="RON">RON - Romanian Leu</button></li>
+        <li><button class="dropdown-item target-currency" data-value="SEK">SEK - Swedish Krona</button></li>
+        <li><button class="dropdown-item target-currency" data-value="SGD">SGD - Singapore Dollar</button></li>
+        <li><button class="dropdown-item target-currency" data-value="THB">THB - Thai Baht</button></li>
+        <li><button class="dropdown-item target-currency" data-value="TRY">TRY - Turkish Lira</button></li>
+        <li><button class="dropdown-item target-currency" data-value="TWD">TWD - Taiwan Dollar</button></li>
+        <li><button class="dropdown-item target-currency" data-value="ZAR">ZAR - South African Rand</button></li>
+      </ul>
+    </div>
+
+    <!-- Second Dropdown (Target Currency) -->
+    <div class="dropdown-center exch-buttons mb-3 mx-5">
+      <button class="btn btn-primary dropdown-toggle" type="button" id="targetCurrencyButton" data-bs-toggle="dropdown" aria-expanded="false">
+        Choose Target Currency
+      </button>
+      <ul class="dropdown-menu" aria-labelledby="targetCurrencyButton">
+        <li><button class="dropdown-item target-currency" data-value="USD">USD - United States Dollar</button></li>
+        <li><button class="dropdown-item target-currency" data-value="GBP">GBP - Pound Sterling</button></li>
+        <li><button class="dropdown-item target-currency" data-value="EUR">EUR - Euro</button></li>
+        <li><button class="dropdown-item target-currency" data-value="JPY">JPY - Japanese Yen</button></li>
+        <li><button class="dropdown-item target-currency" data-value="CNY">CNY - Chinese Yuan</button></li>
+        <li><button class="dropdown-item target-currency" data-value="RUB">RUB - Russian Ruble</button></li>
+        <li><button class="dropdown-item target-currency" data-value="INR">INR - Indian Rupee</button></li>
+        <li><button class="dropdown-item target-currency" data-value="AUD">AUD - Australian Dollar</button></li>
+        <li><button class="dropdown-item target-currency" data-value="CAD">CAD - Canadian Dollar</button></li>
+        <li><button class="dropdown-item target-currency" data-value="CHF">CHF - Swiss Franc</button></li>
+        <li><button class="dropdown-item target-currency" data-value="CUP">CUP - Colombian Peso</button></li>
+        <li><button class="dropdown-item target-currency" data-value="CZK">CZK - Czech Koruna</button></li>
+        <li><button class="dropdown-item target-currency" data-value="DKK">DKK - Danish Krone</button></li>
+        <li><button class="dropdown-item target-currency" data-value="HKD">HKD - Hong Kong Dollar</button></li>
+        <li><button class="dropdown-item target-currency" data-value="HUF">HUF - Hungarian Forint</button></li>
+        <li><button class="dropdown-item target-currency" data-value="IDR">IDR - Indonesian Rupiah</button></li>
+        <li><button class="dropdown-item target-currency" data-value="ILS">ILS - Israeli Shekel</button></li>
+        <li><button class="dropdown-item target-currency" data-value="MYR">MYR - Malaysian Ringgit</button></li>
+        <li><button class="dropdown-item target-currency" data-value="MXN">MXN - Mexican Peso</button></li>
+        <li><button class="dropdown-item target-currency" data-value="NOK">NOK - Norwegian Krone</button></li>
+        <li><button class="dropdown-item target-currency" data-value="NZD">NZD - New Zealand Dollar</button></li>
+        <li><button class="dropdown-item target-currency" data-value="PHP">PHP - Philippine Peso</button></li>
+        <li><button class="dropdown-item target-currency" data-value="PLN">PLN - Polish Zloty</button></li>
+        <li><button class="dropdown-item target-currency" data-value="RON">RON - Romanian Leu</button></li>
+        <li><button class="dropdown-item target-currency" data-value="SEK">SEK - Swedish Krona</button></li>
+        <li><button class="dropdown-item target-currency" data-value="SGD">SGD - Singapore Dollar</button></li>
+        <li><button class="dropdown-item target-currency" data-value="THB">THB - Thai Baht</button></li>
+        <li><button class="dropdown-item target-currency" data-value="TRY">TRY - Turkish Lira</button></li>
+        <li><button class="dropdown-item target-currency" data-value="TWD">TWD - Taiwan Dollar</button></li>
+        <li><button class="dropdown-item target-currency" data-value="ZAR">ZAR - South African Rand</button></li>
+      </ul>
+    </div>
+</div>
+
+</div>
+    <!-- Selected Currencies and Result -->
+    <div class="container exchange-container">
+      <h4 id="selectedCurrencies">Selected Currencies: None</h4>
+      </div>
+      <div class="container exchange-container">
+      <h4 id="exchangeRateResult"></h4>
+    </div>
+
+    <div class="container photo-container">
+        <img src="/photo.jpg" alt="exchange rate photo"></img>
+    </div>
+
+
+
+  <!-- Include jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- jQuery Script to handle dropdown selection and API call -->
+  <script>
+    let baseCurrency = '';
+    let targetCurrency = '';
+
+    // Handle base currency selection
+    $('.base-currency').on('click', function() {
+      baseCurrency = $(this).data('value');
+      $('#baseCurrencyButton').text(`Base Currency: ${baseCurrency}`);
+      updateSelectedCurrencies();
+    });
+
+    // Handle target currency selection
+    $('.target-currency').on('click', function() {
+      targetCurrency = $(this).data('value');
+      $('#targetCurrencyButton').text(`Target Currency: ${targetCurrency}`);
+      updateSelectedCurrencies();
+    });
+
+    // Update displayed selected currencies and make API request
+    function updateSelectedCurrencies() {
+      if (baseCurrency && targetCurrency) {
+        $('#selectedCurrencies').text(`Selected Currencies: ${baseCurrency} to ${targetCurrency}`);
+
+        // Fetch the exchange rate from the server
+        $.get('/getExchangeRate', { baseCurrency, targetCurrency }, function(data) {
+          $('#exchangeRateResult').text(`Exchange Rate: 1 ${data.base} = ${data.rate} ${data.target}`);
+        }).fail(function() {
+          $('#exchangeRateResult').text('Error fetching exchange rate.');
+        });
+      }
+    }
+  </script>
+</body>
+</html>
